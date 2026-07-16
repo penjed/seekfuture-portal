@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>小公司信息化与 AI 定制系统</title>
-  <meta name="description" content="从一个业务流程开始，帮小公司低成本用上小程序、管理系统、企业知识库和 AI 助手。">
+  <meta name="description" content="客户、订单、售后还靠微信和 Excel 管？先从一个最麻烦的流程开始，帮你做便宜、好用、能快速上线的小程序、管理系统和 AI 助手。">
   <style>
     :root{
       --bg:#f6f7f9;
@@ -475,6 +475,98 @@
       color:var(--muted);
       font-size:17px;
     }
+    .contact-actions{
+      display:grid;
+      grid-template-columns:1fr 220px;
+      gap:22px;
+      align-items:stretch;
+      margin-top:28px;
+      text-align:left;
+    }
+    .contact-card{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      min-height:100%;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fbfcfd;
+    }
+    .contact-card h3{
+      margin:0;
+      color:var(--ink);
+      font-size:20px;
+      line-height:1.35;
+    }
+    .contact-card p{
+      max-width:none;
+      margin:0;
+      font-size:15px;
+      line-height:1.65;
+    }
+    .contact-list{
+      display:grid;
+      gap:9px;
+      padding:0;
+      margin:0;
+      list-style:none;
+      color:#465365;
+      font-size:14px;
+    }
+    .contact-list li{
+      position:relative;
+      padding-left:18px;
+    }
+    .contact-list li:before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.78em;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--green);
+    }
+    .contact-method{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      min-height:100%;
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fff;
+    }
+    .contact-method img{
+      width:128px;
+      height:128px;
+      border-radius:8px;
+      object-fit:cover;
+    }
+    .contact-method strong{
+      color:var(--ink);
+      font-size:16px;
+      line-height:1.3;
+    }
+    .contact-method span{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+      text-align:center;
+    }
+    .contact-note{
+      margin:18px auto 0;
+      color:#687386;
+      font-size:13px;
+      line-height:1.55;
+    }
+    .contact-note a{
+      color:var(--primary-dark);
+      font-weight:800;
+    }
     footer{
       padding:28px 0 38px;
       color:#687386;
@@ -500,6 +592,8 @@
       .section{padding:58px 0}
       .section-head h2,.statement h2,.cta h2{font-size:29px}
       .grid-2,.grid-3,.fit-list,.process{grid-template-columns:1fr}
+      .contact-actions{grid-template-columns:1fr;text-align:center}
+      .contact-card{text-align:left}
       .statement,.cta{padding:26px 20px}
       .flow-row{grid-template-columns:1fr;gap:4px}
       .panel-body{padding:18px}
@@ -525,45 +619,45 @@
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">小程序 · 管理系统 · 企业知识库 · AI 助手</div>
-          <h1>从一个业务流程开始，<br><span>让小公司低成本用上信息化和 AI</span></h1>
-          <p class="hero-lead">如果你的客户、订单、售后、资料还散在微信、Excel 和人工沟通里，我可以帮你做一个便宜、好用、能快速上线的小程序 / 管理系统 / AI 助手组合方案。</p>
+          <h1>先把一个乱流程理顺，<br><span>再把 AI 用到真正省事的地方</span></h1>
+          <p class="hero-lead">如果你的客户、订单、售后、资料还散在微信、Excel 和人工沟通里，我可以先帮你看清楚问题，再做一个便宜、好用、能快速上线的小程序 / 管理系统 / AI 助手。</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:penjan1126@gmail.com?subject=免费诊断业务流程&body=你好，我想诊断一下公司业务流程。当前最麻烦的问题是：">免费诊断你的业务流程</a>
-            <a class="btn btn-secondary" href="#fit">看看适合做什么</a>
-            <a href="/wechat-id.jpg" target="_blank" aria-label="打开微信二维码"><img src="/wechat-id.jpg" alt="微信二维码 — 同号联系" style="width:96px;height:96px;border-radius:8px;margin-top:8px;object-fit:cover;"></a>
+            <a class="btn btn-primary" href="mailto:penjan1126@gmail.com?subject=免费诊断业务流程&body=你好，我想诊断一下公司业务流程。当前最麻烦的问题是：">我帮你看看先改哪里</a>
+            <a class="btn btn-secondary" href="#fit">看看你适不适合做</a>
+            <a href="wechat-id.jpg" target="_blank" aria-label="打开微信二维码"><img src="wechat-id.jpg" alt="微信二维码 — 同号联系" style="width:96px;height:96px;border-radius:8px;margin-top:8px;object-fit:cover;"></a>
           </div>
           <div class="hero-proof" aria-label="服务特点">
-            <div class="proof-item"><b>先做最痛的一步</b><span>不一上来做大系统，先找到最值得上线的流程。</span></div>
-            <div class="proof-item"><b>低成本可落地</b><span>适合不想购买昂贵复杂软件的小公司。</span></div>
-            <div class="proof-item"><b>信息化 + AI</b><span>把客户入口、内部管理、自动问答和统计连接起来。</span></div>
+            <div class="proof-item"><b>先解决最烦的一步</b><span>不一上来做大系统，先挑一个真正影响生意的流程。</span></div>
+            <div class="proof-item"><b>成本先控制住</b><span>适合不想买昂贵复杂软件、也不想被系统绑住的小公司。</span></div>
+            <div class="proof-item"><b>AI 不空讲概念</b><span>让它去做查询、回复、统计、提醒这些具体事情。</span></div>
           </div>
         </div>
 
         <div class="workflow-panel" aria-label="业务流程升级示意">
           <div class="panel-top">
-            <span class="panel-title">从混乱流程到可用系统</span>
+            <span class="panel-title">把每天反复处理的事做成系统</span>
             <span class="panel-tag">快速上线</span>
           </div>
           <div class="panel-body">
             <div class="flow-row">
               <div class="flow-label">现在</div>
               <div>
-                <h3>微信、Excel、人工沟通各管一段</h3>
-                <p>客户信息分散，进度靠问，资料靠翻，统计靠临时整理。</p>
+                <h3>微信、Excel、人工沟通各管一块</h3>
+                <p>客户信息散着放，进度靠问，资料靠翻，统计要临时整理。</p>
               </div>
             </div>
             <div class="flow-row">
               <div class="flow-label">第一步</div>
               <div>
-                <h3>挑一个最麻烦的流程做成小系统</h3>
-                <p>例如预约、报修、订单跟进、资料问答或内部审批。</p>
+                <h3>先挑一个最麻烦的流程做起来</h3>
+                <p>比如预约、报修、订单跟进、资料问答或内部审批。</p>
               </div>
             </div>
             <div class="flow-row">
               <div class="flow-label">上线后</div>
               <div>
-                <h3>客户有入口，员工有后台，老板看数据</h3>
-                <p>AI 辅助答复、查询、提醒和汇总，减少重复工作。</p>
+                <h3>客户有入口，员工好处理，老板看得见进度</h3>
+                <p>AI 辅助回复、查询、提醒和汇总，少做重复活。</p>
               </div>
             </div>
             <svg viewBox="0 0 620 160" role="img" aria-label="客户入口、管理后台和 AI 助手连接">
@@ -587,16 +681,16 @@
     <section id="pain" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>你是不是也这样管理业务？</h2>
-          <p>很多小公司不是没有业务，而是业务已经跑起来了，管理方式还停留在微信、Excel 和人工跟进。</p>
+          <h2>你现在是不是也有这些麻烦？</h2>
+          <p>很多公司不是没业务，而是一忙起来，客户、订单、售后就全靠微信、Excel 和人工记。老板想看进度，还得一个个问。</p>
         </div>
         <div class="grid-3">
-          <article class="card"><span class="kicker">客户</span><h3>信息都散在微信里</h3><p>聊天记录、需求、报价、跟进进度分散在不同人手里，换人或忙起来就容易漏。</p></article>
-          <article class="card"><span class="kicker">订单</span><h3>表格越用越乱</h3><p>多个 Excel 版本来回传，统计、对账、查进度都要靠人工翻找。</p></article>
-          <article class="card"><span class="kicker">售后</span><h3>客户一直催进度</h3><p>报修、派单、处理、回访没有统一入口，管理者只能反复问员工做到哪了。</p></article>
-          <article class="card"><span class="kicker">资料</span><h3>知识没人真正用起来</h3><p>产品资料、制度流程、报价口径散落各处，新人上手慢，老员工天天被问。</p></article>
-          <article class="card"><span class="kicker">重复</span><h3>员工时间花在低价值工作上</h3><p>复制粘贴、重复回复、整理统计、催办提醒，占用了本该服务客户的时间。</p></article>
-          <article class="card"><span class="kicker">AI</span><h3>想用 AI 但不知道落到哪里</h3><p>知道 AI 有用，但不知道先改哪个流程，也担心买了复杂系统没人会用。</p></article>
+          <article class="card"><span class="kicker">客户</span><h3>客户信息都在聊天记录里</h3><p>需求、报价、跟进进度分散在不同人手里，换人或忙起来就容易漏。</p></article>
+          <article class="card"><span class="kicker">订单</span><h3>Excel 越用越乱</h3><p>多个表格版本来回传，统计、对账、查进度都要靠人工翻。</p></article>
+          <article class="card"><span class="kicker">售后</span><h3>客户总在问处理到哪了</h3><p>报修、派单、处理、回访没有统一入口，你也只能反复问员工。</p></article>
+          <article class="card"><span class="kicker">资料</span><h3>资料有，但找起来麻烦</h3><p>产品资料、制度流程、报价口径散落各处，新人上手慢，老员工天天被问。</p></article>
+          <article class="card"><span class="kicker">重复</span><h3>员工时间都耗在重复事上</h3><p>复制粘贴、重复回复、整理统计、催办提醒，占用了本该服务客户的时间。</p></article>
+          <article class="card"><span class="kicker">AI</span><h3>想用 AI，但不知道先用在哪</h3><p>知道 AI 有用，但不知道先改哪个流程，也担心买了复杂系统没人会用。</p></article>
         </div>
       </div>
     </section>
@@ -604,14 +698,14 @@
     <section id="fit" class="section section-white">
       <div class="container">
         <div class="section-head">
-          <h2>适合这样的公司</h2>
-          <p>不需要先做一套昂贵复杂的软件。先把最麻烦、最重复、最影响客户体验的流程变清楚。</p>
+          <h2>如果你是这种情况，就适合先聊聊</h2>
+          <p>不用一开始就做一套很大的软件。先把最麻烦、最重复、最影响客户体验的一件事理清楚。</p>
         </div>
         <div class="fit-list">
-          <div class="fit-item"><span class="mark">✓</span><div><strong>业务已经跑起来</strong><span>但客户、订单、售后、资料还靠微信和 Excel 管理。</span></div></div>
-          <div class="fit-item"><span class="mark">✓</span><div><strong>不想买大而重的软件</strong><span>希望系统更贴近自己业务，成本更可控，上线更快。</span></div></div>
-          <div class="fit-item"><span class="mark">✓</span><div><strong>先解决一个真实问题</strong><span>愿意从预约、报修、工单、知识库、自动回复中的一个点开始。</span></div></div>
-          <div class="fit-item"><span class="mark">✓</span><div><strong>想把 AI 用到业务里</strong><span>不是追热点，而是让 AI 做查询、总结、提醒、问答这些具体工作。</span></div></div>
+          <div class="fit-item"><span class="mark">✓</span><div><strong>业务已经在跑</strong><span>但客户、订单、售后、资料还主要靠微信和 Excel 管。</span></div></div>
+          <div class="fit-item"><span class="mark">✓</span><div><strong>不想买大而重的软件</strong><span>希望系统贴近自己业务，成本可控，上线也快一点。</span></div></div>
+          <div class="fit-item"><span class="mark">✓</span><div><strong>想先解决一个真问题</strong><span>可以从预约、报修、工单、知识库、自动回复里的一个点开始。</span></div></div>
+          <div class="fit-item"><span class="mark">✓</span><div><strong>想把 AI 用到业务里</strong><span>不是追热点，而是让 AI 帮你查资料、做总结、发提醒、答常见问题。</span></div></div>
         </div>
       </div>
     </section>
@@ -620,13 +714,13 @@
       <div class="container">
         <div class="statement">
           <div>
-            <h2>不是买一套复杂软件，而是先解决一个真实流程</h2>
-            <p>我会先看你现在最头疼的流程，再判断哪些部分适合用小程序、管理后台或 AI。第一版只做最值得上线的那一步，跑起来后再根据真实反馈优化。</p>
+            <h2>不用一上来买复杂软件，先把一个流程跑顺</h2>
+            <p>我会先听你现在最头疼的地方，再判断哪些部分适合做成小程序、管理后台或 AI 助手。第一版只做最值得上线的那一步，先跑起来，再根据真实反馈慢慢优化。</p>
           </div>
           <div class="statement-list">
-            <div class="statement-item"><span class="mark">1</span><span>先诊断：哪些流程最乱、最重复、最影响客户体验。</span></div>
-            <div class="statement-item"><span class="mark">2</span><span>再收敛：只做第一版必须上线的功能，不堆功能清单。</span></div>
-            <div class="statement-item"><span class="mark">3</span><span>最后落地：让客户能用、员工能处理、老板能看到进度和数据。</span></div>
+            <div class="statement-item"><span class="mark">1</span><span>先聊清楚：哪里最乱、最重复、最影响客户体验。</span></div>
+            <div class="statement-item"><span class="mark">2</span><span>再收一收：第一版只做必须上线的功能，不堆一堆用不上的东西。</span></div>
+            <div class="statement-item"><span class="mark">3</span><span>最后落地：客户能提交，员工能处理，老板能看到进度和数据。</span></div>
           </div>
         </div>
       </div>
@@ -635,24 +729,24 @@
     <section id="solutions" class="section section-white">
       <div class="container">
         <div class="section-head">
-          <h2>按业务问题组合，不按技术菜单报价</h2>
-          <p>你不需要先搞懂技术名词。你只要说清楚业务哪里最麻烦，我来组合小程序、管理系统、知识库和 AI 能力。</p>
+          <h2>你不用先懂技术，先说清楚哪里麻烦</h2>
+          <p>不用纠结到底是小程序、管理系统还是 AI。你先把业务问题讲清楚，我来判断用什么方式最合适。</p>
         </div>
         <div class="grid-3">
           <article class="card solution-card">
             <span class="tag">流程系统</span>
             <h3>业务流程信息化</h3>
-            <p>把预约、订单、售后、工单、客户管理从微信和 Excel 里整理出来。</p>
+            <p>把预约、订单、售后、工单、客户管理从微信和 Excel 里理出来。</p>
             <ul>
               <li>客户在线提交需求、预约或报修</li>
               <li>员工在后台处理任务和进度</li>
-              <li>老板查看状态、数据和异常</li>
+              <li>老板随时看状态、数据和异常</li>
             </ul>
           </article>
           <article class="card solution-card">
             <span class="tag">知识 + AI</span>
             <h3>企业知识库 + AI 助手</h3>
-            <p>让制度、产品资料、报价口径、常见问题真正被员工和客服用起来。</p>
+            <p>把制度、产品资料、报价口径、常见问题整理好，让员工和客服真的用得上。</p>
             <ul>
               <li>内部资料智能问答和检索</li>
               <li>新人培训、流程指导、话术参考</li>
@@ -662,7 +756,7 @@
           <article class="card solution-card">
             <span class="tag">组合方案</span>
             <h3>小程序 + 后台 + AI 自动化</h3>
-            <p>给客户一个简单入口，给员工一个处理后台，再让 AI 做重复的查询、统计和提醒。</p>
+            <p>给客户一个简单入口，给员工一个处理后台，再让 AI 帮忙做查询、统计和提醒。</p>
             <ul>
               <li>小程序承接客户入口</li>
               <li>管理后台沉淀业务数据</li>
@@ -676,8 +770,8 @@
     <section id="scenes" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>这些场景，已经可以快速落地</h2>
-          <p>不包装成大型案例，先把可以马上解决的问题讲清楚。第一版的价值，是让流程变得可见、可追踪、可优化。</p>
+          <h2>这些事情，不用等很久就能先做起来</h2>
+          <p>不包装成大型案例，先把能马上解决的问题讲清楚。第一版的价值，就是让流程看得见、追得上、后面还能继续优化。</p>
         </div>
         <div class="grid-3">
           <article class="case-card">
@@ -687,7 +781,7 @@
                 <path d="M42 37h54M42 57h36M118 35l18 18-18 18" fill="none" stroke="#2854c5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <div class="case-body"><h3>售后工单系统</h3><p>客户报修、自动派单、进度跟踪、处理记录和回访统计更清楚。</p></div>
+            <div class="case-body"><h3>售后工单系统</h3><p>客户报修、派单、处理进度、回访记录都放到一起，不用来回问。</p></div>
           </article>
           <article class="case-card">
             <div class="case-visual">
@@ -697,7 +791,7 @@
                 <circle cx="132" cy="56" r="14" fill="#e9f5ef" stroke="#197a56" stroke-width="4"/>
               </svg>
             </div>
-            <div class="case-body"><h3>内部知识库</h3><p>员工不用反复问资料、流程和口径，AI 可以辅助检索和回答。</p></div>
+            <div class="case-body"><h3>内部知识库</h3><p>员工不用反复问资料、流程和口径，AI 可以帮忙检索和回答。</p></div>
           </article>
           <article class="case-card">
             <div class="case-visual">
@@ -706,7 +800,7 @@
                 <path d="M68 34h44M68 49h44M68 64h28" stroke="#a35c00" stroke-width="5" stroke-linecap="round"/>
               </svg>
             </div>
-            <div class="case-body"><h3>小程序预约系统</h3><p>客户在线预约和提交信息，减少反复沟通，后台统一管理记录。</p></div>
+            <div class="case-body"><h3>小程序预约系统</h3><p>客户自己预约、提交信息，后台统一看记录，少一点来回确认。</p></div>
           </article>
         </div>
       </div>
@@ -715,21 +809,37 @@
     <section id="process" class="section section-white">
       <div class="container">
         <div class="section-head">
-          <h2>先诊断，再做最值得上线的那一小步</h2>
-          <p>每一步都围绕真实业务问题，不为了显得高级而堆功能。</p>
+          <h2>先聊清楚，再做最值得上线的那一小步</h2>
+          <p>每一步都围绕你的真实业务问题，不为了显得高级而堆功能。</p>
         </div>
         <div class="process">
-          <article class="step"><h3>诊断业务问题</h3><p>先听你现在怎么接客户、管订单、做售后、查资料。</p></article>
-          <article class="step"><h3>选一个流程</h3><p>判断哪个环节最值得先信息化，明确第一版边界。</p></article>
-          <article class="step"><h3>快速做出可用版</h3><p>先让客户和员工真的用起来，再收集反馈。</p></article>
-          <article class="step"><h3>持续加 AI 能力</h3><p>把重复问答、提醒、统计、摘要逐步交给 AI 辅助。</p></article>
+          <article class="step"><h3>先把问题聊清楚</h3><p>听你现在怎么接客户、管订单、做售后、查资料。</p></article>
+          <article class="step"><h3>选一个先做</h3><p>判断哪个环节最值得先改，第一版边界先说清楚。</p></article>
+          <article class="step"><h3>做出能用的第一版</h3><p>先让客户和员工真的用起来，再看哪里需要调整。</p></article>
+          <article class="step"><h3>再慢慢加 AI 能力</h3><p>把重复问答、提醒、统计、摘要逐步交给 AI 辅助。</p></article>
         </div>
 
         <section id="contact" class="cta">
-          <h2>不确定哪里适合信息化？</h2>
-          <p>先把你现在最麻烦的流程发给我。我会帮你判断：是否值得做、第一版做什么、哪些地方可以用 AI 提效。</p>
-          <a class="btn btn-primary" href="mailto:penjan1126@gmail.com?subject=免费诊断业务流程&body=你好，我想诊断一下公司业务流程。当前最麻烦的问题是：">发送业务问题到邮箱</a>
-          <a href="/wechat-id.jpg" target="_blank" aria-label="打开微信二维码"><img src="/wechat-id.jpg" alt="微信二维码 — 同号联系" style="width:120px;height:120px;border-radius:8px;margin-top:12px;object-fit:cover;"></a>
+          <h2>不知道从哪里开始？先把问题发给我</h2>
+          <p>你不用准备完整需求文档。先发来一个具体流程，我帮你判断值不值得做、第一版怎么收、哪些环节可以用 AI 省事。</p>
+          <div class="contact-actions">
+            <div class="contact-card">
+              <h3>先告诉我这 3 件事就行</h3>
+              <ul class="contact-list">
+                <li>现在最麻烦的流程：接单、售后、工单、预约、资料查询等。</li>
+                <li>现在怎么处理：微信、Excel、表单、人工统计，或已有系统。</li>
+                <li>你最想少做的重复事：催进度、查资料、回消息、做统计。</li>
+              </ul>
+              <a class="btn btn-primary" href="mailto:penjan1126@gmail.com?subject=免费诊断业务流程&body=你好，我想诊断一下公司业务流程。%0D%0A%0D%0A1. 当前最麻烦的流程是：%0D%0A2. 现在主要用什么方式处理：%0D%0A3. 最想减少的重复工作是：">邮箱：penjan1126@gmail.com</a>
+              <a class="btn btn-secondary" href="tel:15867135416">电话沟通：15867135416</a>
+            </div>
+            <a class="contact-method" href="wechat-id.jpg" target="_blank" aria-label="打开微信二维码">
+              <img src="wechat-id.jpg" alt="微信二维码">
+              <strong>微信沟通更直接</strong>
+              <span>扫码添加，备注「业务流程诊断」</span>
+            </a>
+          </div>
+          <div class="contact-note">也可以先发邮箱简单说明问题，不需要准备完整需求文档。</div>
         </section>
       </div>
     </section>
